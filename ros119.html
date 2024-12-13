@@ -8,7 +8,7 @@
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -17,12 +17,34 @@
             background: linear-gradient(135deg, #f3f4f6, #e3e4e8);
             color: #333;
         }
+
         h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
             color: #444;
             text-align: center;
         }
+
+        .video-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 20px 0;
+            text-align: center;
+            color: #555;
+        }
+
+        .note-box {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            line-height: 1.6;
+        }
+
         .video-container {
             max-width: 800px;
             width: 100%;
@@ -32,36 +54,61 @@
             background: #fff;
             margin-bottom: 20px;
         }
-        .video-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-align: center;
-            color: #555;
-        }
+
         iframe {
             width: 100%;
             height: 450px;
             border: none;
+            display: block;
         }
+
         footer {
             margin-top: 20px;
             font-size: 0.9rem;
             color: #777;
+            text-align: center;
+        }
+
+        @media (max-width: 850px) {
+            body {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .note-box, 
+            .video-container {
+                width: calc(100% - 30px);
+            }
+
+            iframe {
+                height: 350px;
+            }
         }
     </style>
 </head>
 <body>
     <h1>ROS 119a Final Project Demos</h1>
-    <div class="video-title">Real Time Demo</div>
+    <div class="video-title">Real Time Demo </div>
+    <div class="note-box">
+        Note: The demo contains 5 minutes' Real Time Demo including introductions, and remains are codes explanations. 
+        Because there are too many files, it is impossible to complete the demonstration and code explanation in five minutes. 
+        If you want to save time, you can only watch the first five minutes of the Real Time Demo, and then go directly to 
+        the readmefile, which includes almost all the introductions to the project code.
+    </div>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/rqXiXsVubhQ?si=Hj__EjR_Kn-WqWXV" 
+        <iframe src="https://www.youtube.com/embed/zmo8CKolIh4?si=kP0sMg21CUdxOa5D" 
                 title="YouTube video player 1" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
         </iframe>
     </div>
     <div class="video-title">Simulation Demo</div>
+    <div class="note-box">
+        Note: This is the demo of simulation one with more details, and this is the V2 version released before Thanksgiving Holiday.
+    </div>
     <div class="video-container">
         <iframe src="https://www.youtube.com/embed/rqXiXsVubhQ?si=Hj__EjR_Kn-WqWXV" 
                 title="YouTube video player 2" 
